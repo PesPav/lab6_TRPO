@@ -1,7 +1,6 @@
 package ru.volsu.qa.models;
 
 public class Post {
-    Integer id;
     String first_name;
     String last_name;
     String gender;

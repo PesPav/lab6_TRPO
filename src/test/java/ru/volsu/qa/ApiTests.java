@@ -38,15 +38,15 @@ public class ApiTests {
     public Object[][] IdUsersDataProvider(){
         return new Object[][]{
                 {"/26554"},
-                {"/1457"},
-                {"/1455"}
+                {"/1544"},
+                {"/1542"}
         };
     }
 
     @DataProvider(name = "deleteIdUsersDataProvider")
     public Object[][] DeleteIdUsersDataProvider(){
         return new Object[][]{
-                {"/1460"}
+                {"/1542"}
         };
     }
 
@@ -114,7 +114,7 @@ public class ApiTests {
                 .log().body()
                 .contentType(ContentType.JSON).body(newPost)
         .when()
-                .put( resources+"/1452"+access_token)
+                .put( resources+"/1544"+access_token)
         .then()
                 .log().body()
                 .assertThat()
@@ -214,12 +214,12 @@ public class ApiTests {
             System.out.println("Ожидаемый текст исключения: java.lang.AssertionError: 1 expectation failed.\n" +
                     "JSON path result doesn't match.\n" +
                     "Expected: null\n" +
-                    "  Actual: {code=0, name=Not Found, message=Object not found: 1460, status=404}\n");
+                    "  Actual: {code=0, name=Not Found, message=Object not found: 1542, status=404}\n");
             System.out.println("Текст исключения: " + e);
             Assert.assertEquals(e.toString(),"java.lang.AssertionError: 1 expectation failed.\n" +
                     "JSON path result doesn't match.\n" +
                     "Expected: null\n" +
-                    "  Actual: {code=0, name=Not Found, message=Object not found: 1460, status=404}\n");
+                    "  Actual: {code=0, name=Not Found, message=Object not found: 1542, status=404}\n");
         }
     }
 }
